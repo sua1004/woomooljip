@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* footer.css */
+
+footer {
+    width: 100%;
+    padding: 60px 0;
+    height: 120px !important;
+    background-color: #697565;
+}
+
+/* footer 전체 영역 */
+footer .footer-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* 실제 컨텐츠 영역 (1280px) */
+footer .footer-inner {
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+footer .footer-inner::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 좌측 : 로고 + 정보 */
+.footer-info {
+    float: left;
+}
+
+/* 로고 */
+.footer-info > a {
+    float: left;
+}
+.footer-info > a img {
+    width: 115px;
+    display: block;
+    margin-right: 40px;
+}
+
+/* 텍스트 */
+.footer-info .footer-txt {
+    float: left;
+}
+.footer-info .footer-txt p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #fff;
+}
+
+/* 우측 : sns */
+footer .sns {
+    float: right;
+}
+
+/* sns 아이콘 */
+footer .sns a {
+    float: left;
+    margin-left: 40px;
+}
+footer .sns a img {
+    width: 100%;
+    display: block;
+}
+footer .sns a:last-child {
+    position: relative;
+    left: 0;
+    top: 8px;
+}

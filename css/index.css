@@ -1,0 +1,448 @@
+@charset "UTF-8";
+
+/* index css */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* 각 페이지 공통의 클래스 .page */
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    background-color: #181C14;
+}
+
+main {
+    /* padding-top: 80px; */
+    box-sizing: border-box;
+
+    position: relative; /* .video-overlay의 기준 */
+    overflow: hidden;
+}
+
+/* 비디오 */
+main .main-content {
+    width: 100%;
+    height: 100%;
+}
+main .main-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+/* 타이틀 */
+main .main-inner {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 100%;
+
+    position: relative; /* .main-info의 기준 */
+}
+main .main-inner .main-info {
+    width: 1280px; /* 컨텐츠 너비 1280px */
+    margin: 0 auto;
+    position: absolute;
+    bottom: 124%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 2;
+    /* outline: 2px solid red; */
+}
+main .main-inner .main-info .main-title {
+    font-weight: 600;
+    font-size: 52px;
+    color: #fff;
+}
+main .main-inner .main-info .main-desc {
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+}
+
+/* article : woomool *********************************************************/
+article.woomool {
+    position: relative; /* .woomool-inner, .woomool-info의 기준 */
+    /* width: 100%;
+    height: 100%; */
+}
+
+article.woomool .woomool-inner {
+    position: absolute; 
+    top: 50%;            
+    left: 50%;           
+    transform: translate(-50%, -50%);
+
+    width: 1280px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+article.woomool .woomool-inner::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 왼쪽 텍스트 */
+.woomool-inner .woomool-info {
+    /* float: left; */
+    width: 45%;
+
+    position: absolute;
+    left: 0;
+    bottom: 90%;
+    transform: translateY(90%);
+}
+.woomool-inner .woomool-info .woomool-txt h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.woomool-inner .woomool-info .woomool-txt p {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.woomool-inner .woomool-info button {
+    margin-top: 40px;
+
+    background: none;
+    border: 1px solid #fff;
+    padding: 16px 86px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+
+    cursor: pointer;
+}
+.woomool-inner .woomool-info button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+    text-decoration: none;
+}
+.woomool-inner .woomool-info button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* 오른쪽 이미지 */
+.woomool-img {
+    margin-top: 80px;
+    float: right;
+    width: 47%;
+}
+
+.woomool-img img {
+    width: 100%;
+    display: block;
+}
+
+/* article : menu *********************************************************/
+
+article.menu {
+    /* width: 100%;
+    height: 100%; */
+
+    margin-top: 80px;
+    position: relative; /* .menu-inner의 기준 */
+
+    background: url(../images/main_bg.png) no-repeat left;
+}
+article.menu .menu-inner {
+    width: 1280px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+article.menu .menu-inner::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 왼쪽 이미지 (슬라이드) */
+article.menu .menu-inner .slide-box {
+    width: 700px;
+    /* overflow: hidden; */
+
+    float: left;
+    position: relative; /* .menu-info의 기준 */
+}
+.slide-box .menu-img-wrap {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.slide-box .menu-img-wrap .menu-img {
+    width: 400%;
+    position: relative; /* 슬라이드 이동 준비 */
+    left: 0;
+}
+.slide-box .menu-img-wrap .menu-img::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.slide-box .menu-img-wrap .menu-img li {
+    width: 25%;
+    float: left;
+}
+.slide-box .menu-img-wrap .menu-img li  img {
+    width: 100%;
+    display: block;
+}
+
+/* 하단 - 메뉴명 */
+.slide-box .menu-meta {
+    position: relative; /* .menu-name-list, .menu-pager의 기준  */
+    width: 100%;
+    height: 30px;
+}
+.slide-box .menu-meta .menu-name-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 24px;
+}
+.slide-box .menu-meta .menu-name-list li {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    white-space: nowrap;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.slide-box .menu-meta .menu-name-list li.active {
+    opacity: 1;
+}
+
+/* 하단 - 페이저 */
+.slide-box .menu-meta .menu-pager {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    cursor: pointer;
+}
+.slide-box .menu-meta .menu-pager li {
+    display: inline-block;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    margin-left: 6px;
+}
+.slide-box .menu-meta .menu-pager li.active {
+    color: #fff;
+}
+
+/* 오른쪽 텍스트 */
+article.menu .menu-inner .menu-info {
+    /* float: right; */
+    width: 45%;
+
+    position: absolute;
+    right: -10%;
+    top: 44%;
+    transform: translateY(-44%);
+}
+.menu-info .menu-txt h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff;
+}
+.menu-info .menu-txt p {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-info button {
+    margin-top: 40px;
+
+    background: none;
+    border: 1px solid #fff;
+    padding: 16px 86px;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+
+    cursor: pointer;
+}
+.menu-info button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+    text-decoration: none;
+}
+.menu-info button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* article : store ******************************************************/
+
+article.store {
+    /* width: 100%;
+    height: 100%; */
+
+    margin-top: 80px;
+}
+article.store .store-inner {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 상단 텍스트 */
+.store-inner .store-info {
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 120px;
+    position: relative;
+}
+.store-inner .store-info h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.store-inner .store-info button {
+    position: absolute;
+    right: 0;
+    top: 140px;
+    background: none;
+    border: none;
+}
+.store-inner .store-info button a {
+    color: #fff;
+    font-size: 16px;
+}
+.store-inner .store-info button:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* 이미지 슬라이드 */
+article.store .store-inner .slide-box {
+    width: 1280px;
+    margin: 40px auto 0;
+    position: relative;
+}
+
+.slide-box .store-img-wrap {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.slide-box .store-img-wrap .store-img {
+    width: 400%;
+    position: relative; /* 슬라이드 이동 준비 */
+    left: 0;
+}
+.slide-box .store-img-wrap .store-img::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.slide-box .store-img-wrap .store-img li {
+    float: left;
+    width: 25%;
+}
+.slide-box .store-img-wrap .store-img li img {
+    width: 100%;
+    display: block;
+}
+
+/* 하단 - 지점명 */
+.slide-box .store-meta {
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+
+.slide-box .store-name-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 24px;
+}
+.slide-box .store-name-list li {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    white-space: nowrap;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.slide-box .store-name-list li.active {
+    opacity: 1;
+}
+
+/* 하단 - 페이저 */
+.slide-box .store-pager {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    cursor: pointer;
+}
+.slide-box .store-pager li {
+    display: inline-block;
+    margin-left: 10px;
+
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+}
+.slide-box .store-pager li.active {
+    color: #fff;
+}
