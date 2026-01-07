@@ -1,4 +1,9 @@
+//index.js
+
 $(document).ready(function () {
+
+    //.main-info 페이드 효과
+    $('.main-info').fadeIn(3000);
 
     //menu 슬라이드 초기 설정
 

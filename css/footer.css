@@ -20,6 +20,8 @@ footer .footer-inner {
     width: 1280px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    position: relative; /* .footer-info, .sns의 기준 */
 }
 footer .footer-inner::after {
     content: "";
@@ -29,7 +31,11 @@ footer .footer-inner::after {
 
 /* 좌측 : 로고 + 정보 */
 .footer-info {
-    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* outline: 2px solid red; */
 }
 
 /* 로고 */
@@ -54,7 +60,11 @@ footer .footer-inner::after {
 
 /* 우측 : sns */
 footer .sns {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 7px;
+
+    /* outline: 2px solid red; */
 }
 
 /* sns 아이콘 */
@@ -63,11 +73,8 @@ footer .sns a {
     margin-left: 40px;
 }
 footer .sns a img {
+    height: 60px;
+
     width: 100%;
     display: block;
-}
-footer .sns a:last-child {
-    position: relative;
-    left: 0;
-    top: 8px;
 }

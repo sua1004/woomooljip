@@ -42,7 +42,7 @@ main .video-overlay {
 
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -64,7 +64,9 @@ main .main-inner .main-info {
     transform: translateX(-50%);
 
     z-index: 2;
-    /* outline: 2px solid red; */
+
+    /* 스크립트 초기 설정 */
+    display: none;
 }
 main .main-inner .main-info .main-title {
     font-weight: 600;
