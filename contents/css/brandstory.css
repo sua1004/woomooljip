@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/* brandstory.css */
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #181C14;
+    
+}
+
+/* 공통 레이아웃 */
+
+.section-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* main ***************************************************************/
+
+.brand-main {
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    position: relative;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+}
+
+/* 배경 이미지 */
+.brand-main .main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url("../images/01_brand/woomoo_main_bg.jpg") no-repeat center / cover;
+    z-index: 0;
+}
+
+/* 어두운 오버레이 */
+.brand-main .main-content::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* 텍스트 영역 */
+.brand-main .main-info {
+    position: relative;
+    z-index: 1;
+
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    color: #fff;
+    line-height: 1.6;
+}
+
+.main-info .main-title {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 32px;
+}
+
+.main-info .main-desc p {
+    font-size: 18px;
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-info .main-desc span {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* SECTION - breand-story ***********************************************/
+
+.brand-story {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 160px 0;
+}
+
+/* 섹션 타이틀 */
+.brand-story .section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 120px;
+
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* story 공통 */
+.brand-story .story {
+    margin-bottom: 160px;
+}
+
+.brand-story .story:last-child {
+    margin-bottom: 0;
+}
+
+/* 정렬 */
+.brand-story .story .img-box,
+.brand-story .story .txt-box {
+    display: inline-block;
+}
+.brand-story article.story-1 > .img-box,
+.brand-story article.story-2 > .txt-box {
+    margin-right: 5%;
+}
+
+.story .img-box {}
+
+.story .img-box img {
+    width: 100%;
+    display: block;
+}
+
+.story .txt-box {
+    color: #fff;
+    line-height: 1.6;
+}
+
+.story .txt-box h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.story .txt-box p {
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.story .txt-box span {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* story-1 */
+.brand-story article.story-1 > .img-box {
+    width: 580px;
+}
+.brand-story article.story-1 > .txt-box {
+    position: relative;
+    left: 0;
+    bottom: 6px;
+}
+.brand-story article.story-1 > .txt-box > p:last-child {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* story-2 */
+.brand-story article.story-1 > .img-box {
+    width: 660px;
+}
+.brand-story article.story-2 > .txt-box {
+    position: relative;
+    left: 0;
+    top: -64px;
+}
