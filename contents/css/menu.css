@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+/* menu.css */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #181C14;
+
+}
+
+/* main *****************************************************/
+main {
+    width: 100%;
+    max-width: 1920px;
+    padding-top: 80px;
+}
+main .main-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    position: relative; /* .slide-box, .main-info의 기준 */
+}
+
+/* 왼쪽 이미지 */
+main .main-inner .slide-box {
+    width: 600px;
+    height: 440px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slide-box .main-img-wrap {
+    overflow: hidden;
+}
+
+.slide-box .main-img-wrap .main-img {
+    width: 400%;
+    height: 100%;
+    
+    position: relative; /* 슬라이드 이동 준비 */
+    left: 0;
+
+    margin-bottom: 20px;
+}
+.slide-box .main-img-wrap .main-img::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.slide-box .main-img-wrap .main-img li {
+    width: 25%;
+    float: left;
+}
+.slide-box .main-img-wrap .main-img li img {
+    width: 100%;
+    display: block;
+}
+
+/* 페이저 */
+.slide-box .main-img-wrap .main-pager {
+    text-align: center;
+}
+.slide-box .main-img-wrap .main-pager li {
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+}
+.slide-box .main-img-wrap .main-pager li ~ li {
+    margin-left: 6px;
+}
+.slide-box .main-img-wrap .main-pager li.active {
+    color: #fff;
+}
+
+/* 오른쪽 텍스트 */
+main .main-inner .main-info {
+    width: 600px;
+    height: 440px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    color: #fff;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+main .main-inner .main-info .main-info-inner {
+    position: relative;
+    top: 30%;
+    transform: translateY(-30%);
+
+}
+
+main .main-inner .main-info .main-name {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 50px;
+}
+main .main-inner .main-info .main-price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 50px;
+}
+main .main-inner .main-info .main-option {
+    font-size: 18px;
+    font-weight: 500;
+
+    margin-bottom: 26px;
+}
+
+main .main-inner .main-info .main-caption {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+.main-caption p {
+    margin-bottom: 14px;
+}
+.main-caption p span {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* article : yuksu ***************************************************/
+article.yuksu {
+    width: 100%;
+    max-width: 1920px;
+}
+article.yuksu .yuksu-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+article.yuksu .yuksu-inner .yuksu-info {}
+.yuksu-info .yuksu-title {
+    color: #fff;
+}
+.yuksu-info .yuksu-title p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 40px;
+}
+.yuksu-info .yuksu-title h3 {
+    font-size: 26px;
+    font-weight: 500;
+
+    padding-bottom: 20px;
+}
