@@ -149,6 +149,8 @@ section .section-inner {
 
 .menu-item a {
     width: 100%;
+
+    outline: 2px solid;
 }
 .menu-item > a > img {
     width: 100%;
@@ -200,6 +202,10 @@ section .section-inner {
 }
 .menu-item .caption:hover {
     opacity: 1;
+}
+.menu-item .caption > a {
+    width: 400px;
+    height: 550px;
 }
 .menu-item .caption .caption-inner {
     position: relative;
