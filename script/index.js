@@ -124,7 +124,7 @@ $(document).ready(function () {
         var delta = evt.detail ? evt.detail : evt.wheelDelta;
 
 
-        //4. 파이아폭스 처리
+        //4. 파이어폭스 처리
         if(/Firefox/i.test(navigator.userAgent)){
             delta = -evt.detail;
             console.log('파이어폭스 detail: ' + delta);
